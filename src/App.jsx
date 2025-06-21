@@ -31,13 +31,13 @@ const editTransaction = (id, updatedTransaction) => {
   return (
     <Router>
       <Navbar />
-      <h1 className ='main-heading'> Personal Finance Tracer</h1>
+      <h1 className ='main-heading'> Personal Finance Tracker</h1>
       <Routes>
-        <Route path='/' element={<Home Transaction={Transaction}/>} />
+        <Route path='/' element={<Home />} />
         <Route path="/transaction" 
         element={
           <Transaction 
-          transaction={Transaction}
+          transactions={transactions}
           addTransaction={addTransaction}
           deleteTransaction={deleteTransaction}
           editTransaction={editTransaction}
@@ -46,7 +46,7 @@ const editTransaction = (id, updatedTransaction) => {
            />
 
         <Route path="/dashboard" element={<Dashboard 
-        transaction={Transaction}/>}/>
+        transactions={transactions}/>}/>
       </Routes>
     </Router>
 
